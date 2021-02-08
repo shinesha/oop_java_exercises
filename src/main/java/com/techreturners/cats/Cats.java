@@ -3,25 +3,24 @@ package com.techreturners.cats;
 
 public abstract class Cats implements Cat {
 	
-
-	//goToSleep();
-	boolean isAsleep;
-	//void wakeUp();
+	boolean isAsleep = false; 
 	String setting;
 	int averageHeight;
 	String soundAfterEating;
 	final String sleepStyle = "onFront";
 	
-	public Cats(boolean isAsleep, String setting, int averageHeight, String soundAfterEating) {
+	public Cats(boolean isAsleep, String setting, int averageHeight, String soundAfterEat) {
 		super();
-		this.isAsleep = isAsleep;
+		this.isAsleep = false;
 		this.setting = setting;
 		this.averageHeight = averageHeight;
-		this.soundAfterEating = soundAfterEating;
+		this.soundAfterEating = soundAfterEat;
 	}
 
 	public boolean isAsleep() {
 		return isAsleep;
+		
+		
 	}
 
 	public void goToSleep() {
@@ -48,12 +47,8 @@ public abstract class Cats implements Cat {
 		this.averageHeight = averageHeight;
 	}
 
-	public String getSoundAfterEating() {
+	public String eat() {
 		return soundAfterEating;
-	}
-
-	public void setSoundAfterEating(String soundAfterEating) {
-		this.soundAfterEating = soundAfterEating;
 	}
 
 	public String getSleepStyle() {

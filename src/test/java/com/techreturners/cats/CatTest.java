@@ -8,20 +8,20 @@ public class CatTest {
 
     @Test
     public void checkCatIsAwake() {
-        Cat domesticCat = new DomesticCat(false, null, 0, null);
+        Cat domesticCat = new DomesticCat(null, null, 0, null);
         assertFalse("Cat should be awake by default", domesticCat.isAsleep());
     }
 
     @Test
     public void checkCatCanGoToSleep() {
-        Cat domesticCat = new DomesticCat(false, null, 0, null);
+        Cat domesticCat = new DomesticCat(null, null, 0, null);
         domesticCat.goToSleep();
         assertTrue("Cat should be snoozing", domesticCat.isAsleep());
     }
 
     @Test
     public void checkCatCanWakep() {
-        Cat domesticCat = new DomesticCat(false, null, 0, null);
+        Cat domesticCat = new DomesticCat(null, null, 0, null);
         domesticCat.goToSleep();
         domesticCat.wakeUp();
         assertFalse("Cat should be awake now", domesticCat.isAsleep());
@@ -41,26 +41,26 @@ public class CatTest {
 
     @Test
     public void checkLionHeight() {
-        Cat lionCat = new LionCat();
+        Cat lionCat = new LionCat(false, null, 0, null);
         assertEquals(1100, lionCat.getAverageHeight());
     }
 
 
     @Test
     public void feedTheLion() {
-        Cat lionCat = new LionCat();
+        Cat lionCat = new LionCat(false, null, 0, null);
         assertEquals("Roar!!!!", lionCat.eat());
     }
 
     @Test
     public void feedTheCheetah() {
-        Cat cheetahCat = new CheetahCat();
+        Cat cheetahCat = new CheetahCat(false, null, 0, null);
         assertEquals("Zzzzzzz", cheetahCat.eat());
     }
 
     @Test
     public void feedTheCat() {
-        Cat domesticCat = new DomesticCat();
+        Cat domesticCat = new DomesticCat(false, null, 0, null);
         assertEquals("Purrrrrrr", domesticCat.eat());
     }
 }
