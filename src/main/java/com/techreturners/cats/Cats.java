@@ -10,8 +10,7 @@ public abstract class Cats implements Cat {
 	final String sleepStyle = "onFront";
 	
 	public Cats(boolean isAsleep, String setting, int averageHeight, String soundAfterEat) {
-		super();
-		this.isAsleep = false;
+		this.isAsleep = isAsleep;
 		this.setting = setting;
 		this.averageHeight = averageHeight;
 		this.soundAfterEating = soundAfterEat;
